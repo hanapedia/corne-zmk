@@ -60,6 +60,23 @@
         };
 };
 
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <19 20>;
+            bindings = <&kp ESC>;
+        };
+        combo_tilde {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&kp TILDE>;
+        };
+    };
+};
+
+
 &nice_view_spi {
     cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
 };
